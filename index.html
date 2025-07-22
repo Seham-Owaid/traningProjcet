@@ -1,6 +1,70 @@
-<html>
-<p>
-  hello, this is our first project 
-</p>
+<!--جزيئة سهام البقمي في الموقع-->
+<!DOCTYPE html>
+<html lang="ar" >
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  <title>معهد الخوارزمي للتدريب</title>
+</head>
+<body>
 
-</html>
+  <div class="navbar">
+    <a href="#">الرئيسية</a>
+    <span class="separator">|</span>
+
+    <div class="dropdown">
+      <a onclick="toggleDropdown()">الدورات</a>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="#">الشهادات الاحترافيه</a>
+        <a href="#">البرامج و الدبلومات</a>
+        <a href="#">الحاسب الالي</a>
+        <a href="#">اللغةالانجليزية</a>
+      </div>
+    </div>
+
+    <span class="separator">|</span>
+    <a href="#">الدفع </a>
+  </div>
+
+ <div class="textbox">
+  <h3>شرح الفائدة الرئيسية لتطبيقنا</h3>
+  <ul><li>
+يساعدك موقعنا على عرض الدورات التدريبية المتاحة في معهد الخوارزمي للتدريب، مما يسهل عليك اختيار الدورة المناسبة لك.
+  </li>
+    <li>
+الحصول على الشهادات الاحترافية المطلوبة للوظائف و الاغرااض الاخرى .
+    </li>
+        <li>
+            التسجيل للسنوات الاكاديمية لتخصصات مختلفة (لمدة عامين ونصف )
+        </li>
+  </ul>
+  <div class="image">
+<input type="image" name="contact" src="3.jpg"  id="img3" width="70" height="70" >
+
+<input type="image" name="order" src="2.jpg" id="img2" width="70" height="70" >
+
+<input type="image" name="contact" src="1.jpg"  id="img1" width="70" height="70" >
+       </div>
+</div>
+  
+  <script>
+    function toggleDropdown() {
+      var menu = document.getElementById("dropdownMenu");
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+
+//اغلاق القائمة اذا ضغطت برا
+    document.addEventListener("click", function(event) {
+      var dropdown = document.querySelector(".dropdown");
+      if (!dropdown.contains(event.target)) {
+        document.getElementById("dropdownMenu").style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html> 
